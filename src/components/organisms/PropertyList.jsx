@@ -42,10 +42,15 @@ const PropertyList = ({
                   alt={property.title}
                   className="w-full h-48 sm:h-full object-cover rounded-t-xl sm:rounded-l-xl sm:rounded-tr-none"
                 />
-                <div className="absolute top-3 left-3">
+<div className="absolute top-3 left-3 flex flex-col gap-2">
                   <Badge variant="default" className="property-type-badge">
                     {property.type}
                   </Badge>
+                  {property.label && (
+                    <Badge variant="secondary">
+                      {property.label}
+                    </Badge>
+                  )}
                 </div>
                 <button
                   onClick={(e) => handleFavoriteClick(e, property.Id)}

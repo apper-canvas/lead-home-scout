@@ -29,8 +29,9 @@ export const propertyService = {
           { field: { Name: "description_c" } },
           { field: { Name: "features_c" } },
           { field: { Name: "yearBuilt_c" } },
-          { field: { Name: "listingDate_c" } },
-          { field: { Name: "coordinates_c" } }
+{ field: { Name: "listingDate_c" } },
+          { field: { Name: "coordinates_c" } },
+          { field: { Name: "label_c" } }
         ],
         orderBy: [
           {
@@ -61,8 +62,9 @@ export const propertyService = {
         description: property.description_c,
         features: property.features_c ? property.features_c.split(',') : [],
         yearBuilt: property.yearBuilt_c,
-        listingDate: property.listingDate_c,
-        coordinates: JSON.parse(property.coordinates_c || '{}')
+listingDate: property.listingDate_c,
+        coordinates: JSON.parse(property.coordinates_c || '{}'),
+        label: property.label_c
       }));
       
       return transformedData;
@@ -94,8 +96,9 @@ export const propertyService = {
           { field: { Name: "description_c" } },
           { field: { Name: "features_c" } },
           { field: { Name: "yearBuilt_c" } },
-          { field: { Name: "listingDate_c" } },
-          { field: { Name: "coordinates_c" } }
+{ field: { Name: "listingDate_c" } },
+          { field: { Name: "coordinates_c" } },
+          { field: { Name: "label_c" } }
         ]
       };
       
@@ -125,8 +128,9 @@ export const propertyService = {
         description: property.description_c,
         features: property.features_c ? property.features_c.split(',') : [],
         yearBuilt: property.yearBuilt_c,
-        listingDate: property.listingDate_c,
-        coordinates: JSON.parse(property.coordinates_c || '{}')
+listingDate: property.listingDate_c,
+        coordinates: JSON.parse(property.coordinates_c || '{}'),
+        label: property.label_c
       };
     } catch (error) {
       if (error?.response?.data?.message) {
@@ -155,8 +159,9 @@ export const propertyService = {
         description_c: propertyData.description,
         features_c: Array.isArray(propertyData.features) ? propertyData.features.join(',') : propertyData.features,
         yearBuilt_c: propertyData.yearBuilt,
-        listingDate_c: propertyData.listingDate || new Date().toISOString(),
-        coordinates_c: JSON.stringify(propertyData.coordinates)
+listingDate_c: propertyData.listingDate || new Date().toISOString(),
+        coordinates_c: JSON.stringify(propertyData.coordinates),
+        label_c: propertyData.label
       };
       
       const params = {
@@ -214,8 +219,9 @@ export const propertyService = {
         description_c: propertyData.description,
         features_c: Array.isArray(propertyData.features) ? propertyData.features.join(',') : propertyData.features,
         yearBuilt_c: propertyData.yearBuilt,
-        listingDate_c: propertyData.listingDate,
-        coordinates_c: JSON.stringify(propertyData.coordinates)
+listingDate_c: propertyData.listingDate,
+        coordinates_c: JSON.stringify(propertyData.coordinates),
+        label_c: propertyData.label
       };
       
       const params = {

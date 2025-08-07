@@ -1,9 +1,10 @@
 [
   {
-    "Id": 1,
+"Id": 1,
     "title": "Modern Luxury Estate with Pool",
     "price": 1250000,
     "type": "house",
+    "label": "Featured Property",
     "bedrooms": 5,
     "bathrooms": 4,
     "squareFeet": 4200,
